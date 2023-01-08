@@ -46,34 +46,34 @@ import static com.google.common.math.LongMath.divide;
  */
 public final class MonetaryFormat {
 
-    /** Standard format for the BTC denomination. */
+    /** Standard format for the XPC denomination. */
     public static final MonetaryFormat BTC = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 3);
-    /** Standard format for the mBTC denomination. */
-    public static final MonetaryFormat MBTC = new MonetaryFormat().shift(3).minDecimals(2).optionalDecimals(2);
-    /** Standard format for the µBTC denomination. */
-    public static final MonetaryFormat UBTC = new MonetaryFormat().shift(6).minDecimals(0).optionalDecimals(2);
-    /** Standard format for the satoshi denomination. */
-    public static final MonetaryFormat SAT = new MonetaryFormat().shift(8).minDecimals(0).optionalDecimals(0);
+    /** Standard format for the mXPC denomination. */
+    public static final MonetaryFormat MBTC = new MonetaryFormat().shift(3).minDecimals(1).optionalDecimals(1);
+    /** Standard format for the µXPC denomination. -> not used*/
+    public static final MonetaryFormat UBTC = new MonetaryFormat().shift(3).minDecimals(1).optionalDecimals(1);
+    /** Standard format for the mocha denomination. */
+    public static final MonetaryFormat SAT = new MonetaryFormat().shift(4).minDecimals(0).optionalDecimals(0);
     /** Standard format for fiat amounts. */
     public static final MonetaryFormat FIAT = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 1);
-    /** Currency code for base 1 Bitcoin. */
-    public static final String CODE_BTC = "BTC";
-    /** Currency code for base 1/1000 Bitcoin. */
-    public static final String CODE_MBTC = "mBTC";
-    /** Currency code for base 1/1000000 Bitcoin. */
-    public static final String CODE_UBTC = "µBTC";
-    /** Currency code for base 1 satoshi. */
-    public static final String CODE_SAT = "sat";
-    /** Currency symbol for base 1 Bitcoin. */
+    /** Currency code for base 1 XPC. */
+    public static final String CODE_BTC = "XPC";
+    /** Currency code for base 1/1000 XPC. */
+    public static final String CODE_MBTC = "mXPC";
+    /** Currency code for base 1/1000000 XPC. -> not used */
+    public static final String CODE_UBTC = "µXPC";
+    /** Currency code for base 1 mocha. */
+    public static final String CODE_SAT = "mocha";
+    /** Currency symbol for base 1 XPC. */
     public static final String SYMBOL_BTC = "\u20bf";
-    /** Currency symbol for base 1/1000 Bitcoin. */
+    /** Currency symbol for base 1/1000 XPC. */
     public static final String SYMBOL_MBTC = "m" + SYMBOL_BTC;
-    /** Currency symbol for base 1/1000000 Bitcoin. */
+    /** Currency symbol for base 1/1000000 XPC. */
     public static final String SYMBOL_UBTC = "µ" + SYMBOL_BTC;
-    /** Currency symbol for base 1 satoshi. */
+    /** Currency symbol for base 1 mocha. */
     public static final String SYMBOL_SAT = "\u0219";
 
-    public static final int MAX_DECIMALS = 8;
+    public static final int MAX_DECIMALS = 4;
 
     private final char negativeSign;
     private final char positiveSign;
@@ -328,8 +328,8 @@ public final class MonetaryFormat {
         this.codes = new String[MAX_DECIMALS + 1];
         this.codes[0] = useSymbol ? SYMBOL_BTC : CODE_BTC;
         this.codes[3] = useSymbol ? SYMBOL_MBTC : CODE_MBTC;
-        this.codes[6] = useSymbol ? SYMBOL_UBTC : CODE_UBTC;
-        this.codes[8] = useSymbol ? SYMBOL_SAT : CODE_SAT;
+        //this.codes[6] = useSymbol ? SYMBOL_UBTC : CODE_UBTC;
+        this.codes[4] = useSymbol ? SYMBOL_SAT : CODE_SAT;
         this.codeSeparator = ' ';
         this.codePrefixed = true;
     }
