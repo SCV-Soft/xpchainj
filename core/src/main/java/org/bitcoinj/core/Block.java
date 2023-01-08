@@ -97,7 +97,7 @@ public class Block extends Message {
     /** Height of the first block */
     public static final int BLOCK_HEIGHT_GENESIS = 0;
 
-    public static final long BLOCK_VERSION_GENESIS = 1;
+    public static final long BLOCK_VERSION_GENESIS = 4;
     /** Block version introduced in BIP 34: Height in coinbase */
     public static final long BLOCK_VERSION_BIP34 = 2;
     /** Block version introduced in BIP 66: Strict DER signatures */
@@ -285,7 +285,7 @@ public class Block extends Message {
     //
     //   "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
     private static final byte[] genesisTxInputScriptBytes = Utils.HEX.decode
-                ("04ffff001d0104455468652054696d65732030332f4a616e2f32303039204368616e63656c6c6f72206f6e206272696e6b206f66207365636f6e64206261696c6f757420666f722062616e6b73");
+                ("04ffff001d01044258706320646576656c6f70657273206172652050726574747920437574652e204f6620636f757273652069742069732061206a6f6b652e20224e6f7722207965742e");
 
     private static final byte[] genesisTxScriptPubKeyBytes;
     static {

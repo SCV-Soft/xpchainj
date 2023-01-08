@@ -44,8 +44,8 @@ public class MainNetParams extends AbstractBitcoinNetParams {
         port = 8762;
         packetMagic = 0xfc87bac0L;
         dumpedPrivateKeyHeader = 128;
-        addressHeader = 0;
-        p2shHeader = 5;
+        addressHeader = 76;
+        p2shHeader = 28;
         segwitAddressHrp = "xpc";
         spendableCoinbaseDepth = 100;
         bip32HeaderP2PKHpub = 0x0488b21e; // The 4 byte header that serializes in base58 to "xpub".
