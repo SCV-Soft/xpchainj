@@ -356,9 +356,9 @@ public final class MonetaryFormat {
     public CharSequence format(Monetary monetary) {
         // preparation
         int maxDecimals = minDecimals;
-        if (decimalGroups != null)
-            for (int group : decimalGroups)
-                maxDecimals += group;
+        // if (decimalGroups != null)
+        //    for (int group : decimalGroups)
+        //        maxDecimals += group;
         int smallestUnitExponent = monetary.smallestUnitExponent();
         checkState(maxDecimals <= smallestUnitExponent,
                 "The maximum possible number of decimals (%s) cannot exceed %s.", maxDecimals, smallestUnitExponent);
