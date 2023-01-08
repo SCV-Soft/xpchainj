@@ -54,9 +54,9 @@ protobuf {
 }
 
 tasks.withType(Test) {
-    exclude 'org/bitcoinj/core/PeerTest*'
-    exclude 'org/bitcoinj/core/TransactionBroadcastTest*'
-    exclude 'org/bitcoinj/net/discovery/DnsDiscoveryTest*'
+    exclude 'io/xpchainj/core/PeerTest*'
+    exclude 'io/xpchainj/core/TransactionBroadcastTest*'
+    exclude 'io/xpchainj/net/discovery/DnsDiscoveryTest*'
     testLogging {
         events "failed"
         exceptionFormat "full"
@@ -90,7 +90,7 @@ if (GradleVersion.current().compareTo(gradleVersionToolchains) > 0) {
     }
 }
 
-ext.moduleName = 'org.bitcoinj.core'
+ext.moduleName = 'io.xpchainj.core'
 
 jar {
     inputs.property("moduleName", moduleName)
@@ -117,13 +117,13 @@ artifacts {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId = 'bitcoinj-core'
+            artifactId = 'xpchainj-core'
             from components.java
             artifact sourcesJar
             artifact javadocJar
 
             pom {
-                description = 'A Java Bitcoin library'
+                description = 'A Java Xpchain library'
             }
         }
     }

@@ -17,9 +17,9 @@
 package wallettemplate;
 
 import javafx.scene.layout.HBox;
-import org.bitcoinj.core.*;
-import org.bitcoinj.wallet.SendRequest;
-import org.bitcoinj.wallet.Wallet;
+import io.xpchainj.core.*;
+import io.xpchainj.wallet.SendRequest;
+import io.xpchainj.wallet.Wallet;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
@@ -29,16 +29,16 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import org.bitcoinj.walletfx.application.WalletApplication;
-import org.bitcoinj.walletfx.overlay.OverlayController;
-import org.bitcoinj.walletfx.overlay.OverlayableStackPaneController;
+import io.xpchainj.walletfx.application.WalletApplication;
+import io.xpchainj.walletfx.overlay.OverlayController;
+import io.xpchainj.walletfx.overlay.OverlayableStackPaneController;
 import org.bouncycastle.crypto.params.KeyParameter;
-import org.bitcoinj.walletfx.controls.BitcoinAddressValidator;
-import org.bitcoinj.walletfx.utils.TextFieldValidator;
-import org.bitcoinj.walletfx.utils.WTUtils;
+import io.xpchainj.walletfx.controls.XpchainAddressValidator;
+import io.xpchainj.walletfx.utils.TextFieldValidator;
+import io.xpchainj.walletfx.utils.WTUtils;
 
 import static com.google.common.base.Preconditions.checkState;
-import static org.bitcoinj.walletfx.utils.GuiUtils.*;
+import static io.xpchainj.walletfx.utils.GuiUtils.*;
 
 import javax.annotation.Nullable;
 
@@ -68,7 +68,7 @@ public class SendMoneyController implements OverlayController<SendMoneyControlle
         app = WalletApplication.instance();
         Coin balance = app.walletAppKit().wallet().getBalance();
         checkState(!balance.isZero());
-        new BitcoinAddressValidator(app.params(), address, sendBtn);
+        new XpchainAddressValidator(app.params(), address, sendBtn);
         new TextFieldValidator(amountEdit, text ->
                 !WTUtils.didThrow(() -> checkState(Coin.parseCoin(text).compareTo(balance) <= 0)));
         amountEdit.setText(balance.toPlainString());
