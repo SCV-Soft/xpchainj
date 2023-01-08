@@ -97,8 +97,7 @@ public class MainNetParams extends AbstractBitcoinNetParams {
                 genesisBlock.setDifficultyTarget(Block.STANDARD_MAX_DIFFICULTY_TARGET);
                 genesisBlock.setTime(GENESIS_TIME);
                 genesisBlock.setNonce(GENESIS_NONCE);
-                // TODO : make correct hash
-                // checkState(genesisBlock.getHash().equals(GENESIS_HASH), "Invalid genesis hash");
+                checkState(genesisBlock.getHash().equals(GENESIS_HASH), "Invalid genesis hash");
             }
         }
         return genesisBlock;
