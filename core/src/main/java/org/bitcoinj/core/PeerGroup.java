@@ -1947,12 +1947,17 @@ public class PeerGroup implements TransactionBroadcaster {
      * @return a future that will be triggered when the number of connected peers implementing protocolVersion or higher is greater than or equals numPeers
      */
     public ListenableCompletableFuture<List<Peer>> waitForPeersOfVersion(final int numPeers, final long protocolVersion) {
+        //System.out.println("START::findPeersOfAtLeastVersion(protocolVersion)");
         List<Peer> foundPeers = findPeersOfAtLeastVersion(protocolVersion);
+        //System.out.println("END__::findPeersOfAtLeastVersion(protocolVersion)");
+        //System.out.println("START::ListenableCompletableFuture<>()");
         if (foundPeers.size() >= numPeers) {
             ListenableCompletableFuture<List<Peer>> f = new ListenableCompletableFuture<>();
             f.complete(foundPeers);
             return f;
         }
+        //System.out.println("END__::ListenableCompletableFuture<>()");
+        //System.out.println("START::addConnectedEventListener()");
         final ListenableCompletableFuture<List<Peer>> future = new ListenableCompletableFuture<List<Peer>>();
         addConnectedEventListener(new PeerConnectedEventListener() {
             @Override
@@ -1964,6 +1969,7 @@ public class PeerGroup implements TransactionBroadcaster {
                 }
             }
         });
+        //System.out.println("END__::addConnectedEventListener()");
         return future;
     }
 

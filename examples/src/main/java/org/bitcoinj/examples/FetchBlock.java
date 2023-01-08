@@ -65,15 +65,15 @@ public class FetchBlock implements Callable<Integer> {
             PeerAddress addr = new PeerAddress(params, InetAddress.getLocalHost());
             peerGroup.addAddress(addr);
         }
-        System.out.println("start::peerGroup.start()");
+        //System.out.println("START::peerGroup.start()");
         peerGroup.start();
-        System.out.println("end::peerGroup.start()");
-        System.out.println("start::peerGroup.waitForPeers(1).get()");
+        //System.out.println("END__::peerGroup.start()");
+        //System.out.println("START::peerGroup.waitForPeers(1).get()");
         peerGroup.waitForPeers(1).get();
-        System.out.println("end::peerGroup.waitForPeers(1).get()");
-        System.out.println("start::peerGroup.getConnectedPeers().get(0)");
+        //System.out.println("END__::peerGroup.waitForPeers(1).get()");
+        //System.out.println("START::peerGroup.getConnectedPeers().get(0)");
         Peer peer = peerGroup.getConnectedPeers().get(0);
-        System.out.println("end::peerGroup.getConnectedPeers().get(0)");
+        //System.out.println("END__::peerGroup.getConnectedPeers().get(0)");
 
         // Retrieve a block through a peer
         Sha256Hash blockHash = Sha256Hash.wrap(blockHashParam);
