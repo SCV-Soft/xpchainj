@@ -41,7 +41,7 @@ public class MainNetParams extends AbstractBitcoinNetParams {
         targetTimespan = TARGET_TIMESPAN;
         maxTarget = Utils.decodeCompactBits(Block.STANDARD_MAX_DIFFICULTY_TARGET);
 
-        port = 8762;
+        port = 8798;
         packetMagic = 0xfc87bac0L;
         dumpedPrivateKeyHeader = 128;
         addressHeader = 76;
