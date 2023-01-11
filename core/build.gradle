@@ -117,7 +117,7 @@ artifacts {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId = 'bitcoinj-core'
+            artifactId = 'xpchainj-core'
             from components.java
             artifact sourcesJar
             artifact javadocJar

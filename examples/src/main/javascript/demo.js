@@ -17,12 +17,12 @@
 // This file shows how to use bitcoinj from Javascript.
 // To run, grab the bitcoinj bundled JAR and then do something like this:
 //
-//   jjs -cp bitcoinj-0.12-bundled.jar demo.js
+//   jjs -cp xpchainj-0.12-bundled.jar demo.js
 //
 // This will run this file using the Nashorn Javascript engine, which is not quite as fast as V8 but still very
 // competitive, speed wise. You can also get a repl/interpreter by doing this:
 //
-//   jjs -cp bitcoinj-0.12-bundled.jar
+//   jjs -cp xpchainj-0.12-bundled.jar
 //
 // and then you can play around in the interpreter.
 //
@@ -40,7 +40,7 @@
 //
 //   export slf4j=/path/to/slf4j-jdk14-1.7.7.jar
 //
-//   jjs -cp bitcoinj-0.12-bundled.jar:$slf4fj demo.js
+//   jjs -cp xpchainj-0.12-bundled.jar:$slf4fj demo.js
 //
 // Nashorn implements a slightly extended form of Javascript, you can learn the details of the java interop here:
 //

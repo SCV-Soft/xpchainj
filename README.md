@@ -45,7 +45,7 @@ The **bitcoinj** `wallettool` subproject includes a command-line Wallet Tool (`w
 
 To build an executable shell script that runs the command-line Wallet Tool, use:
 ```
-gradle bitcoinj-wallettool:installDist
+gradle xpchainj-wallettool:installDist
 ```
 
 You can now run the `wallet-tool` without parameters to get help on its operation:
@@ -53,22 +53,22 @@ You can now run the `wallet-tool` without parameters to get help on its operatio
 ./wallettool/build/install/wallet-tool/bin/wallet-tool
 ```
 
-To create a test net wallet file in `~/bitcoinj/bitcoinj-test.wallet`, you would use:
+To create a test net wallet file in `~/bitcoinj/xpchainj-test.wallet`, you would use:
 ```
 mkdir ~/bitcoinj
 ```
 ```
-./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TEST --wallet=$HOME/bitcoinj/bitcoinj-test.wallet create
+./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TEST --wallet=$HOME/bitcoinj/xpchainj-test.wallet create
 ```
 
-To sync the newly created wallet in `~/bitcoinj/bitcoinj-test.wallet` with the test net, you would use:
+To sync the newly created wallet in `~/bitcoinj/xpchainj-test.wallet` with the test net, you would use:
 ```
-./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TEST --wallet=$HOME/bitcoinj/bitcoinj-test.wallet sync
+./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TEST --wallet=$HOME/bitcoinj/xpchainj-test.wallet sync
 ```
 
-To dump the state of the wallet in `~/bitcoinj/bitcoinj-test.wallet` with the test net, you would use:
+To dump the state of the wallet in `~/bitcoinj/xpchainj-test.wallet` with the test net, you would use:
 ```
-./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TEST --wallet=$HOME/bitcoinj/bitcoinj-test.wallet dump
+./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TEST --wallet=$HOME/bitcoinj/xpchainj-test.wallet dump
 ```
 
 Note: These instructions are for macOS/Linux, for Windows use the `wallettool/build/install/wallet-tool/bin/wallet-tool.bat` batch file with the equivalent Windows command-line commands and options.
