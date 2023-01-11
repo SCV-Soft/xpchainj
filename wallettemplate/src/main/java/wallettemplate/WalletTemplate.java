@@ -18,9 +18,9 @@ package wallettemplate;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Pane;
-import io.xpchainj.core.NetworkParameters;
-import io.xpchainj.script.Script;
-import io.xpchainj.walletfx.application.WalletApplication;
+import org.bitcoinj.core.NetworkParameters;
+import org.bitcoinj.script.Script;
+import org.bitcoinj.walletfx.application.WalletApplication;
 
 import java.io.IOException;
 import java.net.URL;

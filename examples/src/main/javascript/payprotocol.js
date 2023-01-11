@@ -16,7 +16,7 @@
 
 // Example app that creates a minimal BIP70 payment request with a multisig output, and then prints it to base64.
 
-var bcj = io.xpchainj;
+var bcj = org.bitcoinj;
 var protos = org.bitcoin.protocols.payments.Protos;
 var pbuf = com.google.protobuf;
 

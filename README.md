@@ -4,9 +4,9 @@
 
 [![Visit our IRC channel](https://kiwiirc.com/buttons/irc.freenode.net/bitcoinj.png)](https://kiwiirc.com/client/irc.freenode.net/bitcoinj)
 
-### Welcome to xpchainj
+### Welcome to bitcoinj
 
-The xpchainj library is a Java implementation of the Xpchain protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of Xpchain Core. It comes with full documentation and some example apps showing how to use it.
+The bitcoinj library is a Java implementation of the Bitcoin protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of Bitcoin Core. It comes with full documentation and some example apps showing how to use it.
 
 ### Technologies
 
@@ -41,11 +41,11 @@ Alternatively, just import the project using your IDE. [IntelliJ](http://www.jet
 
 ### Building and Using the Wallet Tool
 
-The **xpchainj** `wallettool` subproject includes a command-line Wallet Tool (`wallet-tool`) that can be used to create and manage **xpchainj**-based wallets (both the HD keychain and SPV blockchain state.) Using `wallet-tool` on Xpchain's test net is a great way to learn about Xpchain and **xpchainj**.
+The **bitcoinj** `wallettool` subproject includes a command-line Wallet Tool (`wallet-tool`) that can be used to create and manage **bitcoinj**-based wallets (both the HD keychain and SPV blockchain state.) Using `wallet-tool` on Bitcoin's test net is a great way to learn about Bitcoin and **bitcoinj**.
 
 To build an executable shell script that runs the command-line Wallet Tool, use:
 ```
-gradle xpchainj-wallettool:installDist
+gradle bitcoinj-wallettool:installDist
 ```
 
 You can now run the `wallet-tool` without parameters to get help on its operation:
@@ -53,22 +53,22 @@ You can now run the `wallet-tool` without parameters to get help on its operatio
 ./wallettool/build/install/wallet-tool/bin/wallet-tool
 ```
 
-To create a test net wallet file in `~/xpchainj/xpchainj-test.wallet`, you would use:
+To create a test net wallet file in `~/bitcoinj/bitcoinj-test.wallet`, you would use:
 ```
-mkdir ~/xpchainj
+mkdir ~/bitcoinj
 ```
 ```
-./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TEST --wallet=$HOME/xpchainj/xpchainj-test.wallet create
-```
-
-To sync the newly created wallet in `~/xpchainj/xpchainj-test.wallet` with the test net, you would use:
-```
-./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TEST --wallet=$HOME/xpchainj/xpchainj-test.wallet sync
+./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TEST --wallet=$HOME/bitcoinj/bitcoinj-test.wallet create
 ```
 
-To dump the state of the wallet in `~/xpchainj/xpchainj-test.wallet` with the test net, you would use:
+To sync the newly created wallet in `~/bitcoinj/bitcoinj-test.wallet` with the test net, you would use:
 ```
-./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TEST --wallet=$HOME/xpchainj/xpchainj-test.wallet dump
+./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TEST --wallet=$HOME/bitcoinj/bitcoinj-test.wallet sync
+```
+
+To dump the state of the wallet in `~/bitcoinj/bitcoinj-test.wallet` with the test net, you would use:
+```
+./wallettool/build/install/wallet-tool/bin/wallet-tool --net=TEST --wallet=$HOME/bitcoinj/bitcoinj-test.wallet dump
 ```
 
 Note: These instructions are for macOS/Linux, for Windows use the `wallettool/build/install/wallet-tool/bin/wallet-tool.bat` batch file with the equivalent Windows command-line commands and options.
@@ -83,9 +83,9 @@ Now you are ready to [follow the tutorial](https://bitcoinj.github.io/getting-st
 
 ### Testing a SNAPSHOT build
 
-Building apps with official releases of **xpchainj** is covered in the [tutorial](https://bitcoinj.github.io/getting-started).
+Building apps with official releases of **bitcoinj** is covered in the [tutorial](https://bitcoinj.github.io/getting-started).
 
-If you want to develop or test your app with a [Jitpack](https://jitpack.io)-powered build of the latest `master` or `release-0.15` branch of **xpchainj** follow the dynamically-generated instructions for that branch by following the correct link.
+If you want to develop or test your app with a [Jitpack](https://jitpack.io)-powered build of the latest `master` or `release-0.15` branch of **bitcoinj** follow the dynamically-generated instructions for that branch by following the correct link.
 
 
 * [master](https://jitpack.io/#bitcoinj/bitcoinj/master-SNAPSHOT) branch

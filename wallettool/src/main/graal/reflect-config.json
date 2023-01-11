@@ -144,7 +144,7 @@
   "methods":[{"name":"<init>","parameterTypes":["sun.security.x509.X500Name"] }]
 },
 {
-  "name":"io.xpchainj.wallet.Protos$DeterministicKey",
+  "name":"org.bitcoinj.wallet.Protos$DeterministicKey",
   "fields":[
     {"name":"bitField0_"}, 
     {"name":"chainCode_"}, 
@@ -156,7 +156,7 @@
   ]
 },
 {
-  "name":"io.xpchainj.wallet.Protos$Extension",
+  "name":"org.bitcoinj.wallet.Protos$Extension",
   "fields":[
     {"name":"bitField0_"}, 
     {"name":"data_"}, 
@@ -165,7 +165,7 @@
   ]
 },
 {
-  "name":"io.xpchainj.wallet.Protos$Key",
+  "name":"org.bitcoinj.wallet.Protos$Key",
   "fields":[
     {"name":"accountPath_"}, 
     {"name":"bitField0_"}, 
@@ -182,7 +182,7 @@
   ]
 },
 {
-  "name":"io.xpchainj.wallet.Protos$Script",
+  "name":"org.bitcoinj.wallet.Protos$Script",
   "fields":[
     {"name":"bitField0_"}, 
     {"name":"creationTimestamp_"}, 
@@ -190,7 +190,7 @@
   ]
 },
 {
-  "name":"io.xpchainj.wallet.Protos$Tag",
+  "name":"org.bitcoinj.wallet.Protos$Tag",
   "fields":[
     {"name":"bitField0_"}, 
     {"name":"data_"}, 
@@ -198,7 +198,7 @@
   ]
 },
 {
-  "name":"io.xpchainj.wallet.Protos$Transaction",
+  "name":"org.bitcoinj.wallet.Protos$Transaction",
   "fields":[
     {"name":"bitField0_"}, 
     {"name":"blockHash_"}, 
@@ -217,7 +217,7 @@
   ]
 },
 {
-  "name":"io.xpchainj.wallet.Protos$Wallet",
+  "name":"org.bitcoinj.wallet.Protos$Wallet",
   "fields":[
     {"name":"bitField0_"}, 
     {"name":"description_"}, 
@@ -237,7 +237,7 @@
   ]
 },
 {
-  "name":"io.xpchainj.wallettool.WalletTool",
+  "name":"org.bitcoinj.wallettool.WalletTool",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true
 },
