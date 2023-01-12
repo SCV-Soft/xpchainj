@@ -50,7 +50,7 @@ public final class MonetaryFormat {
     public static final MonetaryFormat BTC = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 3);
     /** Standard format for the mXPC denomination. */
     public static final MonetaryFormat MBTC = new MonetaryFormat().shift(3).minDecimals(1).optionalDecimals(1);
-    /** Standard format for the µXPC denomination. -> not used*/
+    /** Standard format for the µXPC denomination.  not used*/
     public static final MonetaryFormat UBTC = new MonetaryFormat().shift(3).minDecimals(1).optionalDecimals(1);
     /** Standard format for the mocha denomination. */
     public static final MonetaryFormat SAT = new MonetaryFormat().shift(4).minDecimals(0).optionalDecimals(0);
@@ -60,7 +60,7 @@ public final class MonetaryFormat {
     public static final String CODE_BTC = "XPC";
     /** Currency code for base 1/1000 XPC. */
     public static final String CODE_MBTC = "mXPC";
-    /** Currency code for base 1/1000000 XPC. -> not used */
+    /** Currency code for base 1/1000000 XPC.  not used */
     public static final String CODE_UBTC = "µXPC";
     /** Currency code for base 1 mocha. */
     public static final String CODE_SAT = "mocha";
