@@ -25,7 +25,7 @@ import org.bitcoinj.core.PeerGroup;
  * provide transactions to remote peers when they ask for them.</p>
  * @deprecated use {@link BlockchainDownloadEventListener}
  */
-@Deprecated
+//@Deprecated
 public interface PeerDataEventListener extends BlocksDownloadedEventListener, ChainDownloadStartedEventListener,
         GetDataEventListener, PreMessageReceivedEventListener {
 }

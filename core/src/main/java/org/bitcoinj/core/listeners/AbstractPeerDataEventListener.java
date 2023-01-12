@@ -24,7 +24,7 @@ import java.util.*;
 /**
  * Deprecated: implement the more specific event listener interfaces instead to fill out only what you need
  */
-@Deprecated
+//@Deprecated
 public abstract class AbstractPeerDataEventListener implements PeerDataEventListener {
     @Override
     public void onBlocksDownloaded(Peer peer, Block block, @Nullable FilteredBlock filteredBlock, int blocksLeft) {
