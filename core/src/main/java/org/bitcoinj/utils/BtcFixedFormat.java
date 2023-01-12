@@ -156,7 +156,7 @@ public final class BtcFixedFormat extends BtcFormat {
         case 1:               return "Decicoin-";
         case 2:               return "Centicoin-";
         case MILLICOIN_SCALE: return "Millicoin-";
-        case MICROCOIN_SCALE: return "Microcoin-";
+        // case MICROCOIN_SCALE: return "Microcoin-";
         case -1:              return "Dekacoin-";
         case -2:              return "Hectocoin-";
         case -3:              return "Kilocoin-";

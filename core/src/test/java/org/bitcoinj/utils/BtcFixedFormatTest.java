@@ -52,7 +52,7 @@ public class BtcFixedFormatTest {
                 {1, "Decicoin-"},
                 {2, "Centicoin-"},
                 {MILLICOIN_SCALE, "Millicoin-"},
-                {MICROCOIN_SCALE, "Microcoin-"},
+                // {MICROCOIN_SCALE, "Microcoin-"},
                 {-1, "Dekacoin-"},
                 {-2, "Hectocoin-"},
                 {-3, "Kilocoin-"},

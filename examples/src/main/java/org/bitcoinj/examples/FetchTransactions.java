@@ -43,7 +43,7 @@ public class FetchTransactions {
         PeerGroup peerGroup = new PeerGroup(params, chain);
         peerGroup.start();
         peerGroup.addAddress(new PeerAddress(params, InetAddress.getLocalHost()));
-        peerGroup.waitForPeers(1).get();
+        peerGroup.waitForPeers(3).get();
         Peer peer = peerGroup.getConnectedPeers().get(0);
 
         Sha256Hash txHash = Sha256Hash.wrap(args[0]);

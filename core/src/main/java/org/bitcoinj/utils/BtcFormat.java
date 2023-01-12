@@ -520,7 +520,7 @@ public abstract class BtcFormat extends Format {
 
     /** A constant useful for specifying a denomination of microbitcoins, the {@code int}
      *  value {@code 6}. */
-    public static final int MICROCOIN_SCALE = 6;
+    public static final int MICROCOIN_SCALE = 3;
 
     /** Return the number of decimal places by which any value denominated in the
      *  units indicated by the given scale differs from that same value denominated in satoshis */
@@ -1472,7 +1472,7 @@ public abstract class BtcFormat extends Format {
         case 1:               return "d" + code;
         case 2:               return "c" + code;
         case MILLICOIN_SCALE: return "m" + code;
-        case MICROCOIN_SCALE: return "µ" + code;
+        // case MICROCOIN_SCALE: return "µ" + code;
         case -1:              return "da" + code;
         case -2:              return "h" + code;
         case -3:              return "k" + code;
@@ -1487,7 +1487,7 @@ public abstract class BtcFormat extends Format {
         case 1:               return "d" + symbol;
         case 2:               return "¢" + symbol;
         case MILLICOIN_SCALE: return "₥" + symbol;
-        case MICROCOIN_SCALE: return "µ" + symbol;
+        // case MICROCOIN_SCALE: return "µ" + symbol;
         case -1:              return "da" + symbol;
         case -2:              return "h" + symbol;
         case -3:              return "k" + symbol;
