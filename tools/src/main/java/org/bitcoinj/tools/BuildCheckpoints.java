@@ -115,12 +115,12 @@ public class BuildCheckpoints implements Callable<Integer> {
         } else if (networkHasDnsSeeds) {
             // use a peer group discovered with dns
             peerGroup.setUserAgent("PeerMonitor", "1.0");
-            peerGroup.setMaxConnections(20);
+            peerGroup.setMaxConnections(1);
             peerGroup.addPeerDiscovery(new DnsDiscovery(params));
             peerGroup.start();
 
             // Connect to at least 4 peers because some may not support download
-            Future<List<Peer>> future = peerGroup.waitForPeers(4);
+            Future<List<Peer>> future = peerGroup.waitForPeers(1);
             System.out.println("Connecting to " + params.getId() + ", timeout 20 seconds...");
             // throw timeout exception if we can't get peers
             future.get(20, SECONDS);
@@ -141,6 +141,7 @@ public class BuildCheckpoints implements Callable<Integer> {
 
         chain.addNewBestBlockListener(Threading.SAME_THREAD, block -> {
             int height = block.getHeight();
+            System.out.println(String.format("Got %d", height));
             if (height % params.getInterval() == 0 && block.getHeader().getTimeSeconds() <= timeAgo) {
                 System.out.println(String.format("Checkpointing block %s at height %d, time %s",
                         block.getHeader().getHash(), block.getHeight(), Utils.dateTimeFormat(block.getHeader().getTime())));
@@ -148,9 +149,14 @@ public class BuildCheckpoints implements Callable<Integer> {
             }
         });
 
+        System.out.println("222");
+        System.out.println(peerGroup.getConnectedPeers().toString());
+        System.out.println(peerGroup.getMaxConnections());
         peerGroup.downloadBlockChain();
 
+        System.out.println("333");
         checkState(checkpoints.size() > 0);
+        System.out.println("444");
 
         final File plainFile = new File("checkpoints" + suffix);
         final File textFile = new File("checkpoints" + suffix + ".txt");

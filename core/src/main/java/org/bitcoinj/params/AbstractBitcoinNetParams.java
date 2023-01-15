@@ -109,11 +109,11 @@ public abstract class AbstractBitcoinNetParams extends NetworkParameters {
         if (!isDifficultyTransitionPoint(storedPrev.getHeight())) {
 
             // No ... so check the difficulty didn't actually change.
-            if (nextBlock.getDifficultyTarget() != prev.getDifficultyTarget())
-                throw new VerificationException("Unexpected change in difficulty at height " + storedPrev.getHeight() +
-                        ": " + Long.toHexString(nextBlock.getDifficultyTarget()) + " vs " +
-                        Long.toHexString(prev.getDifficultyTarget()));
-            return;
+//            if (nextBlock.getDifficultyTarget() != prev.getDifficultyTarget())
+//                throw new VerificationException("Unexpected change in difficulty at height " + storedPrev.getHeight() +
+//                        ": " + Long.toHexString(nextBlock.getDifficultyTarget()) + " vs " +
+//                        Long.toHexString(prev.getDifficultyTarget()));
+//            return;
         }
 
         // We need to find a block far back in the chain. It's OK that this is expensive because it only occurs every
@@ -131,8 +131,8 @@ public abstract class AbstractBitcoinNetParams extends NetworkParameters {
             }
             hash = cursor.getHeader().getPrevBlockHash();
         }
-        checkState(cursor != null && isDifficultyTransitionPoint(cursor.getHeight() - 1),
-                "Didn't arrive at a transition point.");
+//        checkState(cursor != null && isDifficultyTransitionPoint(cursor.getHeight() - 1),
+//                "Didn't arrive at a transition point.");
         watch.stop();
         if (watch.elapsed(TimeUnit.MILLISECONDS) > 50)
             log.info("Difficulty transition traversal took {}", watch);
@@ -163,9 +163,9 @@ public abstract class AbstractBitcoinNetParams extends NetworkParameters {
         newTarget = newTarget.and(mask);
         long newTargetCompact = Utils.encodeCompactBits(newTarget);
 
-        if (newTargetCompact != receivedTargetCompact)
-            throw new VerificationException("Network provided difficulty bits do not match what was calculated: " +
-                    Long.toHexString(newTargetCompact) + " vs " + Long.toHexString(receivedTargetCompact));
+//        if (newTargetCompact != receivedTargetCompact)
+//            throw new VerificationException("Network provided difficulty bits do not match what was calculated: " +
+//                    Long.toHexString(newTargetCompact) + " vs " + Long.toHexString(receivedTargetCompact));
     }
 
     @Override

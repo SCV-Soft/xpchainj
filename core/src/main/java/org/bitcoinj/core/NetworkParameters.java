@@ -47,7 +47,7 @@ import static org.bitcoinj.core.Coin.COIN;
  */
 public abstract class NetworkParameters {
     /** The string returned by getId() for the main, production network where people trade things. */
-    public static final String ID_MAINNET = "org.bitcoin.production";
+    public static final String ID_MAINNET = "io.xpchain.production";
     /** The string returned by getId() for the testnet. */
     public static final String ID_TESTNET = "org.bitcoin.test";
     /** The string returned by getId() for the signet. */

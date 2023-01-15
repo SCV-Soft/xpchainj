@@ -572,14 +572,14 @@ public class Block extends Message {
         BigInteger target = getDifficultyTargetAsInteger();
 
         BigInteger h = getHash().toBigInteger();
-        if (h.compareTo(target) > 0) {
+//        if (h.compareTo(target) > 0) {
             // Proof of work check failed!
-            if (throwException)
-                throw new VerificationException("Hash is higher than target: " + getHashAsString() + " vs "
-                        + target.toString(16));
-            else
-                return false;
-        }
+//            if (throwException)
+//                throw new VerificationException("Hash is higher than target: " + getHashAsString() + " vs "
+//                        + target.toString(16));
+//            else
+//                return false;
+//        }
         return true;
     }
 
