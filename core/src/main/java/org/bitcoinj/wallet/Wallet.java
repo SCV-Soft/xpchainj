@@ -1918,19 +1918,19 @@ public class Wallet extends BaseTaggableObject
             // race conditions where receivePending may be being called in parallel.
             if (!overrideIsRelevant && !isPendingTransactionRelevant(tx))
                 return;
-            if (isTransactionRisky(tx, dependencies) && !acceptRiskyTransactions) {
-                // isTransactionRisky already logged the reason.
-
-                // Clone transaction to avoid multiple wallets pointing to the same transaction. This can happen when
-                // two wallets depend on the same transaction.
-                Transaction cloneTx = tx.getParams().getDefaultSerializer().makeTransaction(tx.bitcoinSerialize());
-                cloneTx.setPurpose(tx.getPurpose());
-                cloneTx.setUpdateTime(tx.getUpdateTime());
-
-                riskDropped.put(cloneTx.getTxId(), cloneTx);
-                log.warn("There are now {} risk dropped transactions being kept in memory", riskDropped.size());
-                return;
-            }
+//            if (isTransactionRisky(tx, dependencies) && !acceptRiskyTransactions) {
+//                // isTransactionRisky already logged the reason.
+//
+//                // Clone transaction to avoid multiple wallets pointing to the same transaction. This can happen when
+//                // two wallets depend on the same transaction.
+//                Transaction cloneTx = tx.getParams().getDefaultSerializer().makeTransaction(tx.bitcoinSerialize());
+//                cloneTx.setPurpose(tx.getPurpose());
+//                cloneTx.setUpdateTime(tx.getUpdateTime());
+//
+//                riskDropped.put(cloneTx.getTxId(), cloneTx);
+//                log.warn("There are now {} risk dropped transactions being kept in memory", riskDropped.size());
+//                return;
+//            }
             Coin valueSentToMe = tx.getValueSentToMe(this);
             Coin valueSentFromMe = tx.getValueSentFromMe(this);
             if (log.isInfoEnabled())
