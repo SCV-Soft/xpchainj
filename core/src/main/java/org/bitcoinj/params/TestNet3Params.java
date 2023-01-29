@@ -56,7 +56,7 @@ public class TestNet3Params extends AbstractBitcoinNetParams {
         addressHeader = 111;
         p2shHeader = 196;
         segwitAddressHrp = "tb";
-        spendableCoinbaseDepth = 100;
+        spendableCoinbaseDepth = 3;
         bip32HeaderP2PKHpub = 0x043587cf; // The 4 byte header that serializes in base58 to "tpub".
         bip32HeaderP2PKHpriv = 0x04358394; // The 4 byte header that serializes in base58 to "tprv"
         bip32HeaderP2WPKHpub = 0x045f1cf6; // The 4 byte header that serializes in base58 to "vpub".
