@@ -203,7 +203,7 @@ public class BuildCheckpoints implements Callable<Integer> {
                 {"2020000", "ee047613cf2bca1819fe327115dc11a1fcba177b59ae38c9a5aa3a23b09147ec"},
                 {"2025000", "2e1da93ce1b07f64099abe0b7ec932bfa296e65da4c447f5e4b68a2db54634cb"},
                 {"2030000", "af32ce35a6d10d527c98ea0bf4213af1d6c5cb209cd3529cfff22c9e0851979e"},
-                {"2037000", "ad2992d0cfefc6071f5ab6e80d856f55b522b4794931eb37617ec5f5015eb52e"},
+                //{"2037000", "ad2992d0cfefc6071f5ab6e80d856f55b522b4794931eb37617ec5f5015eb52e"},
         };
 
         Peer downloadPeer = peerGroup.getDownloadPeer();
